@@ -15,7 +15,7 @@ express()
       if (body.type === 'test') {
         await discordWebhook.send({
           username: 'Taskmaster',
-          avatarURL: 'https://dodo.ac/np/images/thumb/e/eb/College_Rule_PG_Model.png/240px-College_Rule_PG_Model.png',
+          avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'description': 'just a test',
             'timestamp': body.date,
@@ -26,7 +26,7 @@ express()
       } else if (body.type === 'task' && body.action === 'create') {
         await discordWebhook.send({
           username: 'Taskmaster',
-          avatarURL: 'https://dodo.ac/np/images/thumb/e/eb/College_Rule_PG_Model.png/240px-College_Rule_PG_Model.png',
+          avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
               name: `Created subtask #${body.data.ref} on ${body.data.project.name}`,
@@ -47,7 +47,7 @@ express()
       } else if (body.type === 'userstory' && body.action === 'create') {
         await discordWebhook.send({
           username: 'Taskmaster',
-          avatarURL: 'https://dodo.ac/np/images/thumb/e/eb/College_Rule_PG_Model.png/240px-College_Rule_PG_Model.png',
+          avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
               name: `Created task #${body.data.ref} on ${body.data.project.name}`,
@@ -67,7 +67,7 @@ express()
       } else if (body.type === 'task' && body.action === 'delete') {
         await discordWebhook.send({
           username: 'Taskmaster',
-          avatarURL: 'https://dodo.ac/np/images/thumb/e/eb/College_Rule_PG_Model.png/240px-College_Rule_PG_Model.png',
+          avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
               name: `Deleted subtask #${body.data.ref} on ${body.data.project.name}`,
@@ -87,7 +87,7 @@ express()
       } else if (body.type === 'userstory' && body.action === 'delete') {
         await discordWebhook.send({
           username: 'Taskmaster',
-          avatarURL: 'https://dodo.ac/np/images/thumb/e/eb/College_Rule_PG_Model.png/240px-College_Rule_PG_Model.png',
+          avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
               name: `Deleted task #${body.data.ref} on ${body.data.project.name}`,
@@ -133,7 +133,7 @@ express()
         if (description.length !== 0) {
           await discordWebhook.send({
             username: 'Taskmaster',
-            avatarURL: 'https://dodo.ac/np/images/thumb/e/eb/College_Rule_PG_Model.png/240px-College_Rule_PG_Model.png',
+            avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
             embeds: [{
               'author': {
                 name: `Updated ${body.type === 'task' ? 'subtask' : 'task'} #${body.data.ref} on ${body.data.project.name}`,
