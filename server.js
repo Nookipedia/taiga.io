@@ -29,11 +29,10 @@ express()
           avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
-              name: `Created subtask #${body.data.ref} on ${body.data.project.name}`,
+              name: `Created subtask #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
               url: `${body.data.project.permalink}/task/${body.data.ref}`
             },
             'description': [
-              `**Subject**: ${body.data.subject}`,
               `**Instance**: [${body.data.user_story.subject}](${body.data.project.permalink}/task/${body.data.ref})`,
               `**Description**: ${body.data.description ? body.data.description : 'Nothing'}`,
               `**Assigned to**: ${body.data.assigned_to ? body.data.assigned_to.username : 'Nobody'}`,
@@ -50,11 +49,10 @@ express()
           avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
-              name: `Created task #${body.data.ref} on ${body.data.project.name}`,
+              name: `Created task #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
               url: `${body.data.project.permalink}/us/${body.data.ref}`
             },
             'description': [
-              `**Subject**: ${body.data.subject}`,
               `**Description**: ${body.data.description ? body.data.description : 'Nothing'}`,
               `**Assigned to**: ${body.data.assigned_to ? body.data.assigned_to.username : 'Nobody'}`,
               `**Status**: ${body.data.status.name}`
@@ -70,11 +68,10 @@ express()
           avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
-              name: `Deleted subtask #${body.data.ref} on ${body.data.project.name}`,
+              name: `Deleted subtask #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
               url: body.data.project.permalink
             },
             'description': [
-              `**Subject**: ${body.data.subject}`,
               `**Instance**: [${body.data.user_story.subject}](${body.data.project.permalink}/task/${body.data.ref})`,
               `**Description**: ${body.data.description ? body.data.description : 'Nothing'}`,
               `**Old status**: ${body.data.status.name}`
@@ -90,11 +87,10 @@ express()
           avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
-              name: `Deleted task #${body.data.ref} on ${body.data.project.name}`,
+              name: `Deleted task #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
               url: body.data.project.permalink
             },
             'description': [
-              `**Subject**: ${body.data.subject}`,
               `**Description**: ${body.data.description ? body.data.description : 'Nothing'}`,
               `**Old status**: ${body.data.status.name}`
             ].join('\n'),
@@ -136,7 +132,7 @@ express()
             avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
             embeds: [{
               'author': {
-                name: `Updated ${body.type === 'task' ? 'subtask' : 'task'} #${body.data.ref} on ${body.data.project.name}`,
+                name: `Updated ${body.type === 'task' ? 'subtask' : 'task'} #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
                 url: `${body.data.project.permalink}/task/${body.data.ref}`
               },
               'description': description.join('\n'),
