@@ -34,7 +34,7 @@ express()
             },
             'description': [
               `**Subject**: ${body.data.subject}`,
-              `**Instance**: [${body.data.user_story.subject}](https://tree.taiga.io/project/naedian-hythelia/task/${body.data.ref})`,
+              `**Instance**: [${body.data.user_story.subject}](${body.data.project.permalink}/task/${body.data.ref})`,
               `**Description**: ${body.data.description ? body.data.description : 'Nothing'}`,
               `**Assigned to**: ${body.data.assigned_to ? body.data.assigned_to.username : 'Nobody'}`,
               `**Status**: ${body.data.status.name}`
