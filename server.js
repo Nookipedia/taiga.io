@@ -133,7 +133,7 @@ express()
             embeds: [{
               'author': {
                 name: `Updated ${body.type === 'task' ? 'subtask' : 'task'} #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
-                url: `${body.data.project.permalink}/task/${body.data.ref}`
+                url: `${body.data.project.permalink}/us/${body.data.ref}`
               },
               'description': description.join('\n'),
               'timestamp': body.date,
