@@ -29,7 +29,7 @@ express()
           avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
-              name: `Created subtask #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
+              name: `${body.data.project.name}: Created subtask #${body.data.ref} (${body.data.subject})`,
               url: `${body.data.project.permalink}/task/${body.data.ref}`
             },
             'description': [
@@ -49,7 +49,7 @@ express()
           avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
-              name: `Created task #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
+              name: `${body.data.project.name}: Created task #${body.data.ref} (${body.data.subject})`,
               url: `${body.data.project.permalink}/us/${body.data.ref}`
             },
             'description': [
@@ -68,7 +68,7 @@ express()
           avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
-              name: `Deleted subtask #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
+              name: `${body.data.project.name}: Deleted subtask #${body.data.ref} (${body.data.subject})`,
               url: body.data.project.permalink
             },
             'description': [
@@ -87,7 +87,7 @@ express()
           avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
           embeds: [{
             'author': {
-              name: `Deleted task #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
+              name: `${body.data.project.name}: Deleted task #${body.data.ref} (${body.data.subject})`,
               url: body.data.project.permalink
             },
             'description': [
@@ -132,7 +132,7 @@ express()
             avatarURL: 'https://dodo.ac/np/images/c/c8/Lost_Book_NH_Inv_Icon.png',
             embeds: [{
               'author': {
-                name: `Updated ${body.type === 'task' ? 'subtask' : 'task'} #${body.data.ref} (${body.data.subject}) on ${body.data.project.name}`,
+                name: `${body.data.project.name}: Updated ${body.type === 'task' ? 'subtask' : 'task'} #${body.data.ref} (${body.data.subject})`,
                 url: `${body.data.project.permalink}/us/${body.data.ref}`
               },
               'description': description.join('\n'),
