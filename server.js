@@ -100,7 +100,7 @@ express()
           }]
         })
       } else if ((body.type === 'task' || body.type === 'userstory') && body.action === 'change') {
-        const description = [ '' ]
+        const description = []
         if (body.change.diff.status) description.push(`**Old status**: ${body.change.diff.status.from}`)
         if (body.change.diff.subject) description.push(`**Old subject**: ${body.change.diff.subject.from}`)
         if (body.change.diff.assigned_to) description.push(`**Old assigned**: ${body.change.diff.assigned_to.from ? body.change.diff.assigned_to.from : 'Nobody'}`)
